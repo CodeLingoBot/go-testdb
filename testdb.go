@@ -156,13 +156,13 @@ func StubRollbackError(err error) {
 	})
 }
 
-// Clears all stubbed queries, and replaced functions.
+// Reset clears all stubbed queries, and replaced functions.
 func Reset() {
 	d.conn = newConn()
 	d.openFunc = nil
 }
 
-// Returns a pointer to the global conn object associated with this driver.
+// Conn returns a pointer to the global conn object associated with this driver.
 func Conn() driver.Conn {
 	return d.conn
 }
